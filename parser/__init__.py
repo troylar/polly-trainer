@@ -19,7 +19,7 @@ class Parser(object):
         self.q_and_a = []
 
     def read_file(self):
-        with open('q.yaml', 'r') as stream:
+        with open(self.filename, 'r') as stream:
             y = yaml.load(stream)
 
         n = 1

@@ -38,6 +38,8 @@ class Exporter(object):
             q_voice = q.q_voice or self.voice_picker.pick_a_voice()
             a_voice = q.a_voice or \
                 self.voice_picker.pick_a_voice(Exclude=q_voice)
+            print q_voice
+            print a_voice
             self.logger.debug(' Question Voice: {}'.format(q_voice))
             self.logger.debug(' Answer Voice: {}'.format(a_voice))
             files.append(self.generate_audio(
